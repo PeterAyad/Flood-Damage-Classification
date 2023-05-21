@@ -162,3 +162,5 @@ cython_debug/
 *.jpg
 dataset.zip
 *.pdf
+*.npy
+*.pkl
