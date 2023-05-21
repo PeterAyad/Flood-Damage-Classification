@@ -37,7 +37,7 @@ def preprocess_image(im, sharpness_factor = 10, bordersize = 3):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     image = cv2.GaussianBlur(image,(3,3),0)
     (thresh, bw_image) = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
-    return bw_image, orig_image
+    return cv2.convertScaleAbs(bw_image), orig_image
 
 
 
